@@ -22,7 +22,7 @@ export class MainController {
       renderer.render(scene, camera);
     }
 
-    RendererService.getRenderLoop()(render);
+    RendererService.startRenderLoop(render);
 
   }
 }

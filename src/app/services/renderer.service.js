@@ -5,15 +5,15 @@ export function RendererService($window) {
 
   return {
     getRenderer: getRenderer,
-    getRenderLoop: getRenderLoop
+    startRenderLoop: startRenderLoop
   };
 
   function getRenderer() {
     return renderer;
   }
 
-  function getRenderLoop() {
-    return renderLoop;
+  function startRenderLoop(renderFunction) {
+    renderLoop(renderFunction);
   }
 
   function renderLoop(renderFunction) {
